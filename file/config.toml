@@ -1,0 +1,28 @@
+[sign]
+keystore = "./file/abtool.jks"
+keystore_pass= "123456"
+keystore_key_alias="abtool"
+keystore_key_pass="123456"
+
+[apk]
+apk_path="./file/Demo_abtool.apk"
+apk_outdir="./file/Demo_abtool"
+min_sdk_version="24"
+target_sdk_version="33"
+version_code="1"
+version_name="1.0.0"
+app_name="Demo_abtool"
+
+[jar]
+apktool_path="./file/apktool.jar"
+bundletool_path="./file/bundletool-all-1.15.2.jar"
+android_jar_path="./file/android.jar"
+
+[config]
+install = true
+launch = true
+main_activity = "com.example.demo_abtool/com.example.demo_abtool.MainActivity"
+bundletool_config_path = "./file/config.json"
+
+[build_apk]
+app_path="./file/Demo_abtool"

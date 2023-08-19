@@ -1,0 +1,25 @@
+[package]
+name = "abtool_cli"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+shell = { path = "../shell" }
+clap = { version = "4.3.19", features = ["derive"] }
+serde = { version = "1.0", features = ["derive"] }
+
+tracing = "0.1" # 日志和追踪
+tracing-subscriber ={version= "0.3.17",features=["env-filter","json"]} # 日志和追踪
+
+chrono = "0.4.26"
+anyhow = "1.0.72"
+
+[profile.release]
+lto = true
+opt-level = 'z'
+strip = true
+codegen-units = 1
+#panic = 'abort'
+
